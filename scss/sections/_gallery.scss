@@ -25,7 +25,7 @@
         }
 
         @include lg {
-            grid-template-rows: 670px 270px;
+            grid-template-rows: 460px 270px;
             grid-template-columns: 24% 24% 70px auto 24%;
             grid-template-areas:
             "pic1 pic1 pic1 pic2 pic2"

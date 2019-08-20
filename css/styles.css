@@ -331,7 +331,7 @@ a {
   grid-template-areas: ". content ."; }
   @media (min-width: 992px) {
     .grid {
-      grid-template-columns: 30px auto 30px; } }
+      grid-template-columns: 15px auto 15px; } }
   @media (min-width: 1200px) {
     .grid {
       grid-template-columns: auto 1400px auto; } }
@@ -512,7 +512,7 @@ header {
       grid-template-areas: ". text1 ." ". text2 ." ". text3 ."; } }
   @media (min-width: 992px) {
     #welcome article {
-      grid-template-columns: 215px auto 215px; } }
+      grid-template-columns: 210px auto 210px; } }
   #welcome article p {
     text-align: justify;
     line-height: 24px; }
@@ -539,7 +539,7 @@ header {
       grid-template-areas: "pic1 pic1 pic2" "pic3 pic4 pic4" "pic5 pic6 pic6"; } }
   @media (min-width: 992px) {
     #gallery ul {
-      grid-template-rows: 670px 270px;
+      grid-template-rows: 460px 270px;
       grid-template-columns: 24% 24% 70px auto 24%;
       grid-template-areas: "pic1 pic1 pic1 pic2 pic2" "pic3 pic4 pic5 pic5 pic6"; } }
   #gallery ul li {
