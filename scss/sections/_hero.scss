@@ -7,4 +7,12 @@
     background-size: cover;
     background-position: center;
     height: 240px;
+
+    @include md {
+        height: 700px;
+    }
+
+    @include lg {
+        height: 790px;
+    }
 }

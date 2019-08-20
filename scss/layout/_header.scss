@@ -7,7 +7,7 @@ header {
     "logo burger ."
     "nav nav nav";
     grid-template-columns: 70% auto 10px;
-    @include lg {
+    @include md {
         grid-template-areas: "logo nav";
         grid-template-columns: 30% auto;
     }
@@ -28,7 +28,7 @@ header {
         justify-content: flex-end;
         padding: 0;
 
-        @include lg {
+        @include md {
             display: none;
         }
 
@@ -42,8 +42,9 @@ header {
     nav {
         display: none;
         grid-area: nav;
-        @include lg {
+        @include md {
             display: block !important;
+            
         }
     }
 }

@@ -371,12 +371,12 @@ textarea {
 nav {
   background-color: #488686;
   padding: 10px; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     nav {
       background-color: #fff; } }
   nav ul {
     text-align: right; }
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       nav ul {
         align-items: center;
         display: flex;
@@ -384,17 +384,22 @@ nav {
         justify-content: flex-end; } }
     nav ul li {
       margin: 17px 0; }
-      @media (min-width: 992px) {
+      @media (min-width: 768px) {
         nav ul li {
           margin-bottom: 0;
-          margin-left: 20px; } }
+          margin-left: 20px;
+          margin-top: 0;
+          color: #488686; } }
       nav ul li a:link,
       nav ul li a:visited {
         color: #fff; }
-        @media (min-width: 992px) {
+        @media (min-width: 768px) {
           nav ul li a:link,
           nav ul li a:visited {
-            color: #000; } }
+            color: #488686; } }
+      @media (min-width: 768px) {
+        nav ul li a:hover, nav ul li a:active {
+          color: #000; } }
 
 /* =============
     Header
@@ -403,7 +408,7 @@ header {
   display: grid;
   grid-template-areas: "logo burger ." "nav nav nav";
   grid-template-columns: 70% auto 10px; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     header {
       grid-template-areas: "logo nav";
       grid-template-columns: 30% auto; } }
@@ -420,7 +425,7 @@ header {
     grid-area: burger;
     justify-content: flex-end;
     padding: 0; }
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       header section:nth-child(2) {
         display: none; } }
     header section:nth-child(2) button {
@@ -430,7 +435,7 @@ header {
   header nav {
     display: none;
     grid-area: nav; }
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       header nav {
         display: block !important; } }
 
@@ -467,6 +472,12 @@ header {
   background-size: cover;
   background-position: center;
   height: 240px; }
+  @media (min-width: 768px) {
+    #hero {
+      height: 700px; } }
+  @media (min-width: 992px) {
+    #hero {
+      height: 790px; } }
 
 /* =============
     Welcome
@@ -477,17 +488,40 @@ header {
     text-align: center;
     font-weight: 300;
     font-size: 1.1875rem; }
+    @media (min-width: 768px) {
+      #welcome h1 {
+        font-size: 2.5625rem; } }
     #welcome h1 span {
       font-size: 1.8125rem;
       font-weight: 600; }
+      @media (min-width: 768px) {
+        #welcome h1 span {
+          font-size: 2.5625rem; } }
   #welcome h2 {
     text-align: center;
     font-weight: 300;
     font-size: 1rem;
     padding-bottom: 50px; }
-  #welcome p {
+    @media (min-width: 768px) {
+      #welcome h2 {
+        font-size: 1.8125rem; } }
+  @media (min-width: 768px) {
+    #welcome article {
+      display: grid;
+      grid-template-columns: 60px auto 60px;
+      grid-template-areas: ". text1 ." ". text2 ." ". text3 ."; } }
+  @media (min-width: 992px) {
+    #welcome article {
+      grid-template-columns: 215px auto 215px; } }
+  #welcome article p {
     text-align: justify;
     line-height: 24px; }
+  #welcome article p:nth-child(1) {
+    grid-area: text1; }
+  #welcome article p:nth-child(2) {
+    grid-area: text2; }
+  #welcome article p:nth-child(3) {
+    grid-area: text3; }
 
 /* =============
     Gallery
@@ -495,8 +529,19 @@ header {
 #gallery ul {
   display: grid;
   grid-template-rows: repeat(4, 308px);
+  grid-template-columns: 100%;
   grid-gap: 15px;
   grid-template-areas: "pic1" "pic2" "pic3" "pic4"; }
+  @media (min-width: 768px) {
+    #gallery ul {
+      grid-template-rows: repeat(3, 308px);
+      grid-template-columns: 50% 34px auto;
+      grid-template-areas: "pic1 pic1 pic2" "pic3 pic4 pic4" "pic5 pic6 pic6"; } }
+  @media (min-width: 992px) {
+    #gallery ul {
+      grid-template-rows: 670px 270px;
+      grid-template-columns: 24% 24% 70px auto 24%;
+      grid-template-areas: "pic1 pic1 pic1 pic2 pic2" "pic3 pic4 pic5 pic5 pic6"; } }
   #gallery ul li {
     background-size: cover; }
   #gallery ul li:nth-child(1) {
@@ -511,55 +556,135 @@ header {
   #gallery ul li:nth-child(4) {
     grid-area: pic4;
     background-image: url("../img/gallery/gallery-4.jpg"); }
+  #gallery ul li:nth-child(5) {
+    grid-area: pic5;
+    background-image: url("../img/gallery/gallery-5.jpg"); }
+  #gallery ul li:nth-child(6) {
+    grid-area: pic6;
+    background-image: url("../img/gallery/gallery-6.jpg"); }
 
 /* =============
     Fish
 ============= */
 #fish {
   background-color: #DDF1FE; }
-  #fish div ul {
+  @media (min-width: 768px) {
+    #fish div section {
+      display: flex;
+      align-items: center;
+      display: grid;
+      grid-template-columns: 40% auto 20%;
+      grid-template-areas: "fish text ."; } }
+  @media (min-width: 992px) {
+    #fish div section {
+      grid-template-columns: 45% auto 20%; } }
+  #fish div section ul {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr); }
-    #fish div ul li:nth-child(1) {
+    @media (min-width: 768px) {
+      #fish div section ul {
+        grid-area: fish; } }
+    #fish div section ul li:nth-child(1) {
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
       margin-left: -30px; }
-      #fish div ul li:nth-child(1) img {
+      @media (min-width: 768px) {
+        #fish div section ul li:nth-child(1) {
+          grid-column: 2 / span 1;
+          grid-row: 2 / span 2; } }
+      @media (min-width: 992px) {
+        #fish div section ul li:nth-child(1) {
+          grid-column: 2 / span 1;
+          grid-row: 10 / span 1; } }
+      #fish div section ul li:nth-child(1) img {
         width: 100%; }
-    #fish div ul li:nth-child(2) {
+    #fish div section ul li:nth-child(2) {
       grid-column: 3 / span 5;
       grid-row: 3 / span 7; }
-      #fish div ul li:nth-child(2) img {
+      @media (min-width: 768px) {
+        #fish div section ul li:nth-child(2) {
+          grid-column: 2 / span 8;
+          grid-row: 3 / span 6; } }
+      @media (min-width: 992px) {
+        #fish div section ul li:nth-child(2) {
+          grid-column: 2 / span 7;
+          grid-row: 3 / span 6; } }
+      #fish div section ul li:nth-child(2) img {
         width: 100%; }
-  #fish div p:nth-child(2) {
+  #fish div section div p:nth-child(1) {
     font-weight: 600;
     font-size: 1.0625rem;
     padding-bottom: 15px; }
-  #fish div p:nth-child(3) {
+  #fish div section div p:nth-child(2) {
     font-weight: 300; }
-  #fish div article {
+  @media (min-width: 992px) {
+    #fish div article:nth-child(1) {
+      display: grid;
+      grid-template-columns: 70% auto;
+      grid-template-areas: ". fish3"; } }
+  #fish div article:nth-child(1) img {
+    display: none; }
+    @media (min-width: 992px) {
+      #fish div article:nth-child(1) img {
+        grid-area: fish3;
+        display: block;
+        height: 30px; } }
+  #fish div article:nth-child(3) {
     padding-top: 15px;
     display: grid;
     grid-template-columns: 50% auto;
     grid-template-areas: ". fish"; }
-    #fish div article img {
+    @media (min-width: 768px) {
+      #fish div article:nth-child(3) {
+        display: flex;
+        justify-content: flex-end;
+        display: grid;
+        grid-template-columns: 50% auto 50px;
+        grid-template-areas: "fish1 fish ."; } }
+    @media (min-width: 992px) {
+      #fish div article:nth-child(3) {
+        justify-content: center;
+        grid-template-columns: 70% auto;
+        grid-template-areas: ". fish"; } }
+    #fish div article:nth-child(3) img:nth-child(1) {
+      display: none; }
+      @media (min-width: 768px) {
+        #fish div article:nth-child(3) img:nth-child(1) {
+          display: block;
+          grid-area: fish1;
+          height: 32px; } }
+      @media (min-width: 992px) {
+        #fish div article:nth-child(3) img:nth-child(1) {
+          display: none; } }
+    #fish div article:nth-child(3) img:nth-child(2) {
       grid-area: fish;
       height: 65px; }
+      @media (min-width: 768px) {
+        #fish div article:nth-child(3) img:nth-child(2) {
+          height: 50px; } }
 
 /* =============
     Kang
 ============= */
-#kang div {
-  background-image: url("../img/footer/footer.jpg");
-  background-position: -520px -510px;
-  border-radius: 100px;
-  height: 140px;
-  margin: 0 auto;
-  width: 140px;
-  background-repeat: no-repeat;
-  border: 1px solid black; }
-
-#kang p {
-  text-align: center;
-  padding: 30px 10px 0 10px; }
+#kang {
+  background-color: rgba(216, 216, 216, 0.1); }
+  #kang div {
+    background-image: url("../img/footer/footer.jpg");
+    background-position: -520px -510px;
+    border-radius: 100px;
+    height: 140px;
+    margin: 0 auto;
+    width: 140px;
+    background-repeat: no-repeat;
+    border: 1px solid black; }
+  #kang p {
+    text-align: center;
+    padding: 30px 10px 0;
+    font-weight: 600; }
+    @media (min-width: 768px) {
+      #kang p {
+        padding: 30px 160px 0; } }
+    @media (min-width: 992px) {
+      #kang p {
+        padding: 30px 300px 0; } }

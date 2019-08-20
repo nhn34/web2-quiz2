@@ -4,13 +4,13 @@
 nav {
     background-color: $teal;
     padding: 10px;
-    @include lg {
+    @include md {
         background-color: $white;
     }
 
     ul {
         text-align: right;
-        @include lg {
+        @include md {
             align-items: center;
             display: flex;
             height: 100%;
@@ -19,17 +19,25 @@ nav {
 
         li {
             margin: 17px 0;
-            @include lg {
+            @include md {
                 margin-bottom: 0;
                 margin-left: 20px;
+                margin-top: 0;
+                color: $teal;
             }
 
             a:link,
             a:visited {
                 color: $white;
-                @include lg {
-                    color: $black;
+                @include md {
+                    color: $teal;
                 }
+            }
+
+            a:hover, a:active {
+                @include md {
+                color: $black;
+            }
             }
         }
     }

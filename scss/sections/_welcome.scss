@@ -4,13 +4,20 @@
 
 #welcome {
     padding-bottom: 0;
+
     h1 {
         text-align: center;
         font-weight: 300;
         font-size: rem-calc(19);
+        @include md {
+            font-size: rem-calc(41);
+        }
         span {
             font-size: rem-calc(29);
             font-weight: 600;
+            @include md {
+                font-size: rem-calc(41);
+            }
         }
     }
 
@@ -19,12 +26,37 @@
         font-weight: 300;
         font-size: rem-calc(16);
         padding-bottom: 50px;
+        @include md {
+            font-size: rem-calc(29);
+        }
     }
 
+    article{
+        @include md {
+            display: grid;
+            grid-template-columns: 60px auto 60px;
+            grid-template-areas: ". text1 ."
+            ". text2 ."
+            ". text3 .";
+        }
+        @include lg {
+            grid-template-columns: 215px auto 215px;
+        }
     p {
         text-align: justify;
         line-height: 24px;
     }
+
+    p:nth-child(1) {
+        grid-area: text1;
+    }
+    p:nth-child(2) {
+        grid-area: text2;
+    }
+    p:nth-child(3) {
+        grid-area: text3;
+    }
+}
 
 
 

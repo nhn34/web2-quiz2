@@ -3,6 +3,7 @@
 ============= */
 
 #kang {
+    background-color: $gray;
     div {
         background-image: url("../img/footer/footer.jpg");
         background-position: -520px -510px;
@@ -16,6 +17,15 @@
 
     p {
         text-align: center;
-        padding: 30px 10px 0 10px;
+        padding: 30px 10px 0;
+        font-weight: 600;
+
+        @include md {
+            padding: 30px 160px 0;
+        }
+
+        @include lg {
+            padding: 30px 300px 0;
+        }
     }
 }
