@@ -1,0 +1,37 @@
+/* =============
+    Gallery
+============= */
+
+#gallery {
+    ul {
+        display: grid;
+        grid-template-rows: repeat(4, 308px);
+        grid-gap: 15px;
+        grid-template-areas:
+        "pic1"
+        "pic2"
+        "pic3"
+        "pic4";
+
+        li {
+            background-size: cover;
+        }
+
+        li:nth-child(1){
+            grid-area: pic1;
+            background-image: url("../img/gallery/gallery-1.jpg");
+        }
+        li:nth-child(2){
+            grid-area: pic2;
+            background-image: url("../img/gallery/gallery-2.jpg");
+        }
+        li:nth-child(3){
+            grid-area: pic3;
+            background-image: url("../img/gallery/gallery-3.jpg");
+        }
+        li:nth-child(4){
+            grid-area: pic4;
+            background-image: url("../img/gallery/gallery-4.jpg");
+        }
+    }
+}

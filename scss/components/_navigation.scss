@@ -1,3 +1,36 @@
 /* =============
     Navigation
 ============= */
+nav {
+    background-color: $teal;
+    padding: 10px;
+    @include lg {
+        background-color: $white;
+    }
+
+    ul {
+        text-align: right;
+        @include lg {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: flex-end;
+        }
+
+        li {
+            margin: 17px 0;
+            @include lg {
+                margin-bottom: 0;
+                margin-left: 20px;
+            }
+
+            a:link,
+            a:visited {
+                color: $white;
+                @include lg {
+                    color: $black;
+                }
+            }
+        }
+    }
+}

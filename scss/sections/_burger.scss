@@ -1,0 +1,30 @@
+#burger-container {
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    outline: none;
+    position: relative;
+    width: 30px;
+
+    div {
+        background-color: $teal;
+        height: 3px;
+        position: absolute;
+        width: 100%;
+    }
+
+    div:nth-child(1) {
+        top: 0;
+    }
+
+    div:nth-child(2) {
+        top: 10px;
+    }
+
+    div:nth-child(3) {
+        top: 20px;
+    }
+}

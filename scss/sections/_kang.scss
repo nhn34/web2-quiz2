@@ -1,0 +1,21 @@
+/* =============
+    Kang
+============= */
+
+#kang {
+    div {
+        background-image: url("../img/footer/footer.jpg");
+        background-position: -520px -510px;
+        border-radius: 100px;
+        height: 140px;
+        margin: 0 auto;
+        width: 140px;
+        background-repeat: no-repeat;
+        border: 1px solid black;
+    }
+
+    p {
+        text-align: center;
+        padding: 30px 10px 0 10px;
+    }
+}
