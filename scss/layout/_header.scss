@@ -44,7 +44,15 @@ header {
         grid-area: nav;
         @include md {
             display: block !important;
-            
+        }
+
+        ul {
+            li:nth-child(4) {
+                display: none;
+                @include lg {
+                    display: inline-block;
+                }
+            }
         }
     }
 }

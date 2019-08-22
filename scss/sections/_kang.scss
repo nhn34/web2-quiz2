@@ -12,7 +12,8 @@
         margin: 0 auto;
         width: 140px;
         background-repeat: no-repeat;
-        border: 1px solid black;
+        border: 10px solid $white;
+        box-shadow: 0 0 0 1px $black;
     }
 
     p {

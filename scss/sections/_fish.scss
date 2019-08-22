@@ -36,14 +36,16 @@
                 margin-left: -30px;
 
                 @include md {
-                    grid-column: 2 / span 1;
+                    grid-column: 3 / span 1;
                     grid-row: 2 / span 2;
+                    transform: scaleX(-1);
 
                 }
 
                 @include lg {
                     grid-column: 2 / span 1;
-                    grid-row: 10 / span 1;
+                    grid-row: 9 / span 1;
+                    transform: scaleX(1);
 
                 }
 
@@ -64,7 +66,7 @@
 
                 @include lg {
                     grid-column: 2 / span 7;
-                    grid-row: 3 / span 6;
+                    grid-row: 2 / span 6;
                 }
 
                 img {
@@ -78,10 +80,20 @@
             font-weight: 600;
             font-size: rem-calc(17);
             padding-bottom: 15px;
+
+            @include md {
+                font-size: rem-calc(21);
+            }
+            @include lg {
+                font-size: rem-calc(24);
+            }
         }
 
         p:nth-child(2) {
             font-weight: 300;
+            @include lg {
+                font-size: rem-calc(20);
+            }
         }
     }
     }
@@ -97,7 +109,8 @@
             @include lg {
                 grid-area: fish3;
                 display: block;
-                height: 30px;
+                height: 28px;
+                transform: scaleX(-1);
 
             }
         }
@@ -118,7 +131,7 @@
 
             @include lg {
                 justify-content: center;
-                
+
                 grid-template-columns: 70% auto;
                 grid-template-areas: ". fish";
 
@@ -139,9 +152,12 @@
             img:nth-child(2) {
                 grid-area: fish;
                 height: 65px;
-
                 @include md {
                     height: 50px;
+                }
+
+                @include lg {
+                    margin-top: -90px;
                 }
 
             }

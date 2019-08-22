@@ -45,6 +45,13 @@
     p {
         text-align: justify;
         line-height: 24px;
+        @include md {
+            line-height: 29px;
+        }
+
+        @include md {
+            line-height: 34px;
+        }
     }
 
     p:nth-child(1) {

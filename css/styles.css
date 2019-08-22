@@ -340,6 +340,9 @@ a {
 
 .space {
   padding: 50px 0 50px; }
+  @media (min-width: 992px) {
+    .space {
+      padding: 100px 0; } }
 
 /* =============
     Typography
@@ -438,6 +441,11 @@ header {
     @media (min-width: 768px) {
       header nav {
         display: block !important; } }
+    header nav ul li:nth-child(4) {
+      display: none; }
+      @media (min-width: 992px) {
+        header nav ul li:nth-child(4) {
+          display: inline-block; } }
 
 /* =============
     Footer
@@ -516,6 +524,12 @@ header {
   #welcome article p {
     text-align: justify;
     line-height: 24px; }
+    @media (min-width: 768px) {
+      #welcome article p {
+        line-height: 29px; } }
+    @media (min-width: 768px) {
+      #welcome article p {
+        line-height: 34px; } }
   #welcome article p:nth-child(1) {
     grid-area: text1; }
   #welcome article p:nth-child(2) {
@@ -591,12 +605,14 @@ header {
       margin-left: -30px; }
       @media (min-width: 768px) {
         #fish div section ul li:nth-child(1) {
-          grid-column: 2 / span 1;
-          grid-row: 2 / span 2; } }
+          grid-column: 3 / span 1;
+          grid-row: 2 / span 2;
+          transform: scaleX(-1); } }
       @media (min-width: 992px) {
         #fish div section ul li:nth-child(1) {
           grid-column: 2 / span 1;
-          grid-row: 10 / span 1; } }
+          grid-row: 9 / span 1;
+          transform: scaleX(1); } }
       #fish div section ul li:nth-child(1) img {
         width: 100%; }
     #fish div section ul li:nth-child(2) {
@@ -609,15 +625,24 @@ header {
       @media (min-width: 992px) {
         #fish div section ul li:nth-child(2) {
           grid-column: 2 / span 7;
-          grid-row: 3 / span 6; } }
+          grid-row: 2 / span 6; } }
       #fish div section ul li:nth-child(2) img {
         width: 100%; }
   #fish div section div p:nth-child(1) {
     font-weight: 600;
     font-size: 1.0625rem;
     padding-bottom: 15px; }
+    @media (min-width: 768px) {
+      #fish div section div p:nth-child(1) {
+        font-size: 1.3125rem; } }
+    @media (min-width: 992px) {
+      #fish div section div p:nth-child(1) {
+        font-size: 1.5rem; } }
   #fish div section div p:nth-child(2) {
     font-weight: 300; }
+    @media (min-width: 992px) {
+      #fish div section div p:nth-child(2) {
+        font-size: 1.25rem; } }
   @media (min-width: 992px) {
     #fish div article:nth-child(1) {
       display: grid;
@@ -629,7 +654,8 @@ header {
       #fish div article:nth-child(1) img {
         grid-area: fish3;
         display: block;
-        height: 30px; } }
+        height: 28px;
+        transform: scaleX(-1); } }
   #fish div article:nth-child(3) {
     padding-top: 15px;
     display: grid;
@@ -663,6 +689,9 @@ header {
       @media (min-width: 768px) {
         #fish div article:nth-child(3) img:nth-child(2) {
           height: 50px; } }
+      @media (min-width: 992px) {
+        #fish div article:nth-child(3) img:nth-child(2) {
+          margin-top: -90px; } }
 
 /* =============
     Kang
@@ -677,7 +706,8 @@ header {
     margin: 0 auto;
     width: 140px;
     background-repeat: no-repeat;
-    border: 1px solid black; }
+    border: 10px solid #fff;
+    box-shadow: 0 0 0 1px #000; }
   #kang p {
     text-align: center;
     padding: 30px 10px 0;
